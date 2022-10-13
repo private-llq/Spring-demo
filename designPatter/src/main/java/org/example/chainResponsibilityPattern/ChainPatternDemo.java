@@ -29,5 +29,6 @@ public class ChainPatternDemo {
  
       loggerChain.logMessage(AbstractLogger.ERROR, 
          "This is an error information.");
+
    }
 }
