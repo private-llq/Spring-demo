@@ -1,7 +1,7 @@
-package generator.service;
+package com.example.springredis.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import generator.domain.Users;
+import com.example.springredis.domain.Users;
 
 /**
 * @author liulq

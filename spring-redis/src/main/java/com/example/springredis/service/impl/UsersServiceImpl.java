@@ -1,9 +1,9 @@
-package generator.service.impl;
+package com.example.springredis.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import generator.domain.Users;
-import generator.service.UsersService;
-import generator.mapper.UsersMapper;
+import com.example.springredis.domain.Users;
+import com.example.springredis.service.UsersService;
+import com.example.springredis.mapper.UsersMapper;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,4 +1,4 @@
-package generator.domain;
+package com.example.springredis.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
