@@ -76,7 +76,7 @@ public class Users implements Serializable {
      */
     private Date user_modtime;
 
-    @TableField(exist = false)
+    @TableField(exist = false)//数据库没有的字段
     private static final long serialVersionUID = 1L;
 
     @Override

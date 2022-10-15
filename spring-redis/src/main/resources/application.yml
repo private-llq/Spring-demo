@@ -2,13 +2,12 @@
 
 server:
   servlet:
-    context-path: /api
   port: 8888
 
 spring:
   datasource:     #配置数据源
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql:///users
     username: root
     password: root
@@ -28,3 +27,6 @@ spring:
 mybatis:          #mybatis配置
   type-aliases-package: com.wsjy.domain
   mapper-locations: classpath:/com/wsjy/mapper/*.xml
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
