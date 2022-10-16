@@ -1,7 +1,5 @@
 
-
 server:
-  servlet:
   port: 8888
 
 spring:
@@ -19,14 +17,20 @@ spring:
     suffix: .html
     enabled: true
   redis:          #配置redis
-    database: 0
-    host: localhost
+    database: 1
+    host: 124.222.91.53
     port: 6379
-    password:
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8 #最大连接
+        max-wait: 100 #连接等待时间
+        min-idle: 0 #最小空闲连接
+        max-idle: 8 #最大空闲连接
 
 mybatis:          #mybatis配置
-  type-aliases-package: com.wsjy.domain
-  mapper-locations: classpath:/com/wsjy/mapper/*.xml
+  type-aliases-package: com.example.springredis.domain
+  mapper-locations: classpath:mapper/*.xml
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
