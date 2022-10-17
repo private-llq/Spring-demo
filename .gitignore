@@ -17,6 +17,9 @@ target/
 /spring-import/.mvn
 /spring-import/mvnw
 /spring-import/mvnw.cmd
+*.mvn
+*.mvnw
+*.mvnw.cmd
 /demo
 .idea
 *.iws
