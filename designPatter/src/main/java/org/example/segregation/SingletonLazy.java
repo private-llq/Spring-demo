@@ -1,6 +1,5 @@
 package org.example.segregation;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 /**
  * @program: spring-demo
