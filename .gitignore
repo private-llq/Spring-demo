@@ -17,6 +17,8 @@ target/
 /spring-import/.mvn
 /spring-import/mvnw
 /spring-import/mvnw.cmd
+/spring-import/target
+/designPatter/target
 *.mvn
 *.mvnw
 *.mvnw.cmd
