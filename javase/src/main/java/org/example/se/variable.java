@@ -1,4 +1,4 @@
-package org.example.test;
+package org.example.se;
 
 import sun.applet.Main;
 
