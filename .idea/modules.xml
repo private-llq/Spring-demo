@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/designPatter/designPatter.iml" filepath="$PROJECT_DIR$/designPatter/designPatter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javase/javase.iml" filepath="$PROJECT_DIR$/javase/javase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-demo.iml" filepath="$PROJECT_DIR$/.idea/spring-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-import/spring-import.iml" filepath="$PROJECT_DIR$/spring-import/spring-import.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mybatisplus/spring-mybatisplus.iml" filepath="$PROJECT_DIR$/spring-mybatisplus/spring-mybatisplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-redis/spring-redis.iml" filepath="$PROJECT_DIR$/spring-redis/spring-redis.iml" />
+    </modules>
+  </component>
+</project>

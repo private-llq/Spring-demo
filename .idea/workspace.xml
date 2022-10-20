@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb4d37e2-adb9-46dc-8cfc-ae8664a4e1e7" name="Changes" comment="新增：变量" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\ruanjian\maven\work" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\ruanjian\maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="2G5Pfjetn6qNTeNaH4NM1bLbl6A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../code15-源码/spring-framework-5.0.2.RELEASE-中文注释版/.gradle" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.javase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ruanjian\idea\code16\spring-demo\spring-redis\src\main\java\com\example\springredis\util" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.springredis" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.variable (1)">
+    <configuration name="variable (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.test.variable" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="variable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.javase.variable" />
+      <module name="java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.javase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringRedisApplicationTests.TestHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-redis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springredis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springredis" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springredis.SpringRedisApplicationTests" />
+      <option name="METHOD_NAME" value="TestHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringRedisApplicationTests.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-redis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springredis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springredis" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springredis.SpringRedisApplicationTests" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringRedisApplicationTests.testString1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-redis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springredis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springredis" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springredis.SpringRedisApplicationTests" />
+      <option name="METHOD_NAME" value="testString1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringImportApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-import" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springimport.SpringImportApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringMybatisplusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-mybatisplus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springmybatisplus.SpringMybatisplusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-redis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springredis.SpringRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringRedisApplicationTests.testString1" />
+        <item itemvalue="JUnit.SpringRedisApplicationTests.testString" />
+        <item itemvalue="JUnit.SpringRedisApplicationTests.TestHash" />
+        <item itemvalue="Application.variable (1)" />
+        <item itemvalue="Application.variable" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb4d37e2-adb9-46dc-8cfc-ae8664a4e1e7" name="Changes" comment="" />
+      <created>1665675576464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665675576464</updated>
+      <workItem from="1665675579106" duration="2265000" />
+      <workItem from="1665816320524" duration="24019000" />
+      <workItem from="1665919518619" duration="181000" />
+      <workItem from="1665919719907" duration="11513000" />
+      <workItem from="1666015582922" duration="388000" />
+      <workItem from="1666016055667" duration="252000" />
+      <workItem from="1666017568022" duration="1879000" />
+      <workItem from="1666187688651" duration="350000" />
+      <workItem from="1666189117647" duration="594000" />
+      <workItem from="1666191280567" duration="3130000" />
+    </task>
+    <task id="LOCAL-00001" summary="新增：mybatisplus初始化">
+      <created>1665817590102</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665817590102</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改：mybatisplus初始化">
+      <created>1665817793877</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665817793877</updated>
+    </task>
+    <task id="LOCAL-00003" summary="新增：mybatisplus测试接口">
+      <created>1665818307204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665818307204</updated>
+    </task>
+    <task id="LOCAL-00004" summary="新增：redis的测试">
+      <created>1665926710449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665926710449</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增：javse模块">
+      <created>1666009368643</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666009368643</updated>
+    </task>
+    <task id="LOCAL-00006" summary="新增：变量">
+      <created>1666278179107</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666278179107</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增：mybatisplus初始化" />
+    <MESSAGE value="修改：mybatisplus初始化" />
+    <MESSAGE value="新增：mybatisplus测试接口" />
+    <MESSAGE value="新增：redis的测试" />
+    <MESSAGE value="新增：javse模块" />
+    <MESSAGE value="新增：变量" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增：变量" />
+  </component>
+</project>

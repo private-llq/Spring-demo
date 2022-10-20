@@ -1,0 +1,17 @@
+Index: designPatter/designPatter.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule=\"true\" type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" LANGUAGE_LEVEL=\"JDK_1_8\">\r\n    <output url=\"file://$MODULE_DIR$/target/classes\" />\r\n    <output-test url=\"file://$MODULE_DIR$/target/test-classes\" />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/main/java\" isTestSource=\"false\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/target\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: junit:junit:4.11\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.hamcrest:hamcrest-core:1.3\" level=\"project\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/designPatter/designPatter.iml b/designPatter/designPatter.iml
+--- a/designPatter/designPatter.iml	
++++ b/designPatter/designPatter.iml	
+@@ -5,6 +5,8 @@
+     <output-test url="file://$MODULE_DIR$/target/test-classes" />
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/classes" />
++      <excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/test-classes" />
+       <excludeFolder url="file://$MODULE_DIR$/target" />
+     </content>
+     <orderEntry type="inheritedJdk" />

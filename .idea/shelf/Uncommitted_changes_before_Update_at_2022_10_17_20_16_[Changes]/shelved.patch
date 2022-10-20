@@ -1,0 +1,271 @@
+Index: java/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/java/pom.xml b/java/pom.xml
+new file mode 100644
+--- /dev/null	(date 1665930461222)
++++ b/java/pom.xml	(date 1665930461222)
+@@ -0,0 +1,75 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++  <modelVersion>4.0.0</modelVersion>
++
++  <groupId>org.example</groupId>
++  <artifactId>java</artifactId>
++  <version>1.0</version>
++
++  <name>java</name>
++  <!-- FIXME change it to the project's website -->
++  <url>http://www.example.com</url>
++
++  <properties>
++    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    <maven.compiler.source>1.7</maven.compiler.source>
++    <maven.compiler.target>1.7</maven.compiler.target>
++  </properties>
++
++  <dependencies>
++    <dependency>
++      <groupId>junit</groupId>
++      <artifactId>junit</artifactId>
++      <version>4.11</version>
++      <scope>test</scope>
++    </dependency>
++  </dependencies>
++
++  <build>
++    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
++      <plugins>
++        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
++        <plugin>
++          <artifactId>maven-clean-plugin</artifactId>
++          <version>3.1.0</version>
++        </plugin>
++        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
++        <plugin>
++          <artifactId>maven-resources-plugin</artifactId>
++          <version>3.0.2</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-compiler-plugin</artifactId>
++          <version>3.8.0</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-surefire-plugin</artifactId>
++          <version>2.22.1</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-jar-plugin</artifactId>
++          <version>3.0.2</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-install-plugin</artifactId>
++          <version>2.5.2</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-deploy-plugin</artifactId>
++          <version>2.8.2</version>
++        </plugin>
++        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
++        <plugin>
++          <artifactId>maven-site-plugin</artifactId>
++          <version>3.7.1</version>
++        </plugin>
++        <plugin>
++          <artifactId>maven-project-info-reports-plugin</artifactId>
++          <version>3.0.0</version>
++        </plugin>
++      </plugins>
++    </pluginManagement>
++  </build>
++</project>
+Index: spring-redis/src/test/java/com/example/springredis/SpringRedisApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.springredis;\r\n\r\nimport org.junit.jupiter.api.BeforeEach;\r\nimport org.junit.jupiter.api.Test;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.boot.test.context.SpringBootTest;\r\nimport org.springframework.data.redis.core.RedisTemplate;\r\nimport redis.clients.jedis.Jedis;\r\n\r\n@SpringBootTest\r\nclass SpringRedisApplicationTests {\r\n\r\n    @Test\r\n    void contextLoads() {\r\n    }\r\n\r\n    private Jedis jedis;\r\n    @Autowired\r\n    private RedisTemplate redisTemplate;\r\n\r\n\r\n    @BeforeEach\r\n    void setJedis(){\r\n        Jedis jedis = new Jedis(\"124.222.91.53\",6379);\r\n        jedis.auth(\"123456\");\r\n        jedis.select(0);\r\n    }\r\n\r\n    @Test\r\n    void testString(){\r\n      String result =jedis.set(\"name\",\"小刘\");\r\n        System.out.println(result+\"=值\");\r\n      String name =jedis.get(\"name\");\r\n        System.out.println(name+\"=name的值\");\r\n   }\r\n\r\n   @Test\r\n    void TestHash() {\r\n        jedis.hset(\"user:1\",\"name\",\"小刘\");\r\n        jedis.hset(\"user:1\",\"name1\",\"小张\");\r\n\r\n    }\r\n\r\n    @Test\r\n    void testString1() {\r\n      redisTemplate.opsForValue().set(\"name\",\"小刘\");\r\n      Object name = redisTemplate.opsForValue().get(\"name\");\r\n      System.out.println(\"name的值：\"+name);\r\n  }\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/spring-redis/src/test/java/com/example/springredis/SpringRedisApplicationTests.java b/spring-redis/src/test/java/com/example/springredis/SpringRedisApplicationTests.java
+--- a/spring-redis/src/test/java/com/example/springredis/SpringRedisApplicationTests.java	(revision 3733970427f1ad1dc21654b19a2e5a72b5875686)
++++ b/spring-redis/src/test/java/com/example/springredis/SpringRedisApplicationTests.java	(date 1665926901112)
+@@ -22,16 +22,15 @@
+     @BeforeEach
+     void setJedis(){
+         Jedis jedis = new Jedis("124.222.91.53",6379);
+-        jedis.auth("123456");
+         jedis.select(0);
+     }
+ 
+     @Test
+     void testString(){
+       String result =jedis.set("name","小刘");
+-        System.out.println(result+"=值");
++      System.out.println(result+"=值");
+       String name =jedis.get("name");
+-        System.out.println(name+"=name的值");
++      System.out.println(name+"=name的值");
+    }
+ 
+    @Test
+Index: spring-redis/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nserver:\r\n  port: 8888\r\n\r\nspring:\r\n  datasource:     #配置数据源\r\n    type: com.alibaba.druid.pool.DruidDataSource\r\n    driver-class-name: com.mysql.cj.jdbc.Driver\r\n    url: jdbc:mysql:///users\r\n    username: root\r\n    password: root\r\n  thymeleaf:      #配置thymeleaf模板\r\n    servlet:\r\n      content-type: text/html\r\n    encoding: UTF-8\r\n    prefix: classpath:/templates/\r\n    suffix: .html\r\n    enabled: true\r\n  redis:          #配置redis\r\n    database: 1\r\n    host: 124.222.91.53\r\n    port: 6379\r\n    password: 123456\r\n    lettuce:\r\n      pool:\r\n        max-active: 8 #最大连接\r\n        max-wait: 100 #连接等待时间\r\n        min-idle: 0 #最小空闲连接\r\n        max-idle: 8 #最大空闲连接\r\n\r\nmybatis:          #mybatis配置\r\n  type-aliases-package: com.example.springredis.domain\r\n  mapper-locations: classpath:mapper/*.xml\r\nmybatis-plus:\r\n  configuration:\r\n    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/spring-redis/src/main/resources/application.yml b/spring-redis/src/main/resources/application.yml
+--- a/spring-redis/src/main/resources/application.yml	(revision 3733970427f1ad1dc21654b19a2e5a72b5875686)
++++ b/spring-redis/src/main/resources/application.yml	(date 1665926758494)
+@@ -17,7 +17,7 @@
+     suffix: .html
+     enabled: true
+   redis:          #配置redis
+-    database: 1
++    database: 0
+     host: 124.222.91.53
+     port: 6379
+     password: 123456
+Index: java/src/main/java/org/example/HelloWorld.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/java/src/main/java/org/example/HelloWorld.java b/java/src/main/java/org/example/HelloWorld.java
+new file mode 100644
+--- /dev/null	(date 1665934158393)
++++ b/java/src/main/java/org/example/HelloWorld.java	(date 1665934158393)
+@@ -0,0 +1,51 @@
++package org.example;
++
++/**
++ * @author liuliangqi
++ * @version V1.0
++ * @Package org.example.Test
++ * @date 2022/10/16 22:28
++ * @Copyright 数据类型八种
++ */
++public class HelloWorld  {
++
++     //java是一个强类型的语言，变量必定后才能使用，安全性
++     //弱类型：JavaScript
++
++    public static void main(String[] args) {
++        /**
++         * 1.基本数据类型
++         *   - int 整形 战4个字节
++         *   - byte 字节  1个字节
++         *   - short 短整形 2个字节
++         *   -  lang  长整形 8个字节
++         *
++         *   float 单精度浮点型 4个字节
++         *   double 双精度浮点型 8个字节
++         *
++         *
++         *   char 字符 2个字节
++         *
++         *   boolean 布尔
++         */
++        int num =10;
++        System.out.println(num+"值");
++        byte num_1=20;
++        System.out.println(num_1+"值");
++        short num_2=30;
++        System.out.println(num_2+"值");
++
++        float num_3=50.1F;
++        System.out.println(num_3+"值");
++        double num_4=3.1415926;
++        System.out.println(num_4+"值");
++
++        char name ='A';
++        System.out.println(name+"值");
++
++        String namezhang ="小刘";
++        boolean flag =true;
++
++    }
++
++}
+Index: java/src/main/java/org/example/javase/variable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/java/src/main/java/org/example/javase/variable.java b/java/src/main/java/org/example/javase/variable.java
+new file mode 100644
+--- /dev/null	(date 1665936483863)
++++ b/java/src/main/java/org/example/javase/variable.java	(date 1665936483863)
+@@ -0,0 +1,30 @@
++package org.example.javase;
++
++/**
++ * @author liuliangqi
++ * @version V1.0
++ * @Package org.example.javase
++ * @date 2022/10/16 23:52
++ * @Copyright 基础语法之常量
++ */
++public class variable {
++
++
++
++    public static void main(String[] args) {
++        System.out.println("字符串常量");
++        System.out.println("----整数常量---");
++        System.out.println(6666);
++        System.out.println(55555);
++        System.out.println("-----小数常量-----");
++        System.out.println(3.14);
++        System.out.println(8.88);
++        System.out.println("-----字符常量----");
++        System.out.println('男');
++        System.out.println('女');
++        System.out.println("------布尔常量----");
++        System.out.println(true);
++        System.out.println(false);
++        System.out.println("----null 常量不能输出------");
++    }
++}
+Index: java/src/main/java/org/example/javase/JavaType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/java/src/main/java/org/example/javase/JavaType.java b/java/src/main/java/org/example/javase/JavaType.java
+new file mode 100644
+--- /dev/null	(date 1665935408491)
++++ b/java/src/main/java/org/example/javase/JavaType.java	(date 1665935408491)
+@@ -0,0 +1,27 @@
++package org.example.javase;
++
++
++
++/**
++ * @author liuliangqi
++ * @version V1.0
++ * @Package org.example.javase
++ * @date 2022/10/16 23:33
++ * @Copyright 引用数据类型
++ */
++public class JavaType {
++    /**
++     * java 引用数据类型：  类 、接口、数组
++     * @param args
++     */
++    public static void main(String[] args) {
++
++
++        //创建方式一：
++        int[] nums;
++        //创建方式二：
++        int num[];
++
++        
++    }
++}

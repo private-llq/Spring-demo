@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/designPatter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-import/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatisplus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-redis/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
