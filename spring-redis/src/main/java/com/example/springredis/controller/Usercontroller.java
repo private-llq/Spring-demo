@@ -6,11 +6,7 @@ import com.example.springredis.service.UsersService;
 import com.example.springredis.util.Result;
 import com.example.springredis.vo.CaptchaInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -54,13 +50,12 @@ public class Usercontroller {
 
 
     /**
-     *
+     * 图片验证码校验
      * @return
      */
     @PostMapping("/test")
-    public Result captchaTest(@RequestBody String code){
-
-            return Result.success();
+    public Result captchaTest(@RequestParam("code") String code){
+        return Result.success();
     }
 
 

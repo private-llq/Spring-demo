@@ -8,4 +8,7 @@ package org.example.test;
  * @Copyright 公司
  */
 public class Test {
+    public static void main(String[] args) {
+
+    }
 }
