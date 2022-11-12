@@ -34,8 +34,8 @@ public class ParallelStreamTest {
 
 //        System.out.println();
 //        numbers.forEach(nums->System.out.print(nums));
-        String s="123";
-        dosomethings(s);
+          String s="123";
+          dosomethings(s);
     }
     public static void dosomethings(String s){
         System.out.println(s);
