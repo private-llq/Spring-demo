@@ -1,4 +1,4 @@
-package org.example.factory.factory1;
+package org.example.factory.factoryed;
 
 //把Pizza类做成抽象类
 public abstract class Pizza {

@@ -1,4 +1,4 @@
-package org.example.factory.factory1;
+package org.example.factory.factoryed;
 
 import java.io.BufferedReader;
 import java.io.IOException;

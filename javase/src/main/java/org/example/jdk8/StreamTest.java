@@ -1,9 +1,7 @@
 package org.example.jdk8;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -71,11 +69,11 @@ public class StreamTest {
             /**
              * joining可以将stream中的元素用特定的连接符（没有的话，则直接连接）连接成一个字符串。
              */
-//            String str = list.stream().map(Student::getName).collect(Collectors.joining());
-//            System.out.println(str);
+//           String str = list.stream().map(Student::getName).collect(Collectors.joining());
+//           System.out.println(str);
 //           需求1：求学生年龄的总和  mapToInt
-//            int sum = list.stream().mapToInt(Student::getAge).sum();
-//            System.out.println(sum);
+//           int sum = list.stream().mapToInt(Student::getAge).sum();
+//           System.out.println(sum);
 //          需求2：求学生年龄的平均数 average()
             double average = list.stream()
                     .mapToInt(Student::getAge)
