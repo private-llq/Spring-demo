@@ -1,0 +1,234 @@
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+application:
+  type: NodePort
+  enabled: true
+  configmap:
+    name: snt-env-conf
+  replicaCount: 1
+  repository: "192.168.10.61:9000/s25"
+  tag: "v1.0.0"
+  pullPolicy: IfNotPresent
+  accessModes: ReadWriteMany
+  size: 1Gi
+  storageClassName: nfs-client
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+      #  startupProbe:
+      #    enabled: true
+      #    failureThreshold: "3"
+      #    initialDelaySeconds: "180"
+      #    periodSeconds: "30"
+      #    successThreshold: "1"
+      #    timeoutSeconds: "5"
+  serviceNames:
+    cobra-api-server: 32400
+    cobra-service-provider: 32450
+    fish-api-server: 31100
+    fish-service-provider: 31150
+    koi-api-server: 32500
+    koi-service-provider: 32550
+    koi-snapshot-service-provider: 32560
+    ladybug-api-server: 32800
+    ladybug-service-provider: 32850
+    rabbit-api-server: 20000
+    rabbit-service-provider: 20050
+    rabbit-ws-server: 20004
+    seagull-api-server: 32700
+    seagull-service-provider: 32750
+    starfish-api-server: 32600
+    starfish-service-provider: 32650
+    starfish-tcp-server : 32652
+
+cobra:
+  apiServer:
+    enabled: true
+    serviceName: cobra-api-server
+    port: 32400
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: cobra-service-provider
+    port: 32450
+    tag: v1.0.0
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
+fish:
+  apiServer:
+    enabled: true
+    serviceName: fish-api-server
+    port: 31100
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: fish-service-provider
+    port: 32500
+    tag: v1.0.0
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
+koi:
+  apiServer:
+    enabled: true
+    serviceName: koi-api-server
+    port: 32400
+    tag: v1.0.0
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
+  serviceProvider:
+    enabled: true
+    serviceName: koi-service-provider
+    port: 32500
+    tag: v1.0.0
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
+  snapshotServiceProvider:
+    enabled: true
+    serviceName: koi-snapshot-service-provider
+    port: 32560
+    tag: v1.0.0
+ladybug:
+  apiServer:
+    enabled: true
+    serviceName: ladybug-api-server
+    port: 32800
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: ladybug-service-provider
+    port: 32850
+    tag: v1.0.0
+rabbit:
+  apiServer:
+    enabled: true
+    serviceName: rabbit-api-server
+    port: 2000
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: rabbit-service-provider
+    port: 20050
+    tag: v1.0.0
+  wsServer:
+    enabled: true
+    serviceName: rabbit-ws-server
+    port: 20004
+    tag: v1.0.0
+seagull:
+  apiServer:
+    enabled: true
+    serviceName: seagull-api-server
+    port: 32700
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: seagull-service-provider
+    port: 32750
+    tag: v1.0.0
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
+starfish:
+  apiServer:
+    enabled: true
+    serviceName: starfish-api-server
+    port: 32600
+    tag: v1.0.0
+  serviceProvider:
+    enabled: true
+    serviceName: starfish-service-provider
+    port: 32650
+    tag: v1.0.0
+  tcpServer:
+    serviceName: starfish-tcp-server
+    enabled: true
+    port: 32652
+    tag: v1.0.0
+
+pig:
+  enabled: true
+  image:
+    repository: "192.168.10.61:9000/s25/pig-web"
+    pullPolicy: IfNotPresent
+    tag: "v1.0.0"
+  serverName: pig-web
+  domainName: s25-test.sntsoft.com
+  service:
+    type: NodePort
+    env: []
+    ports:
+      - 80
+  tcp_port: "80"
+  configmap:
+    name: pig-web-conf
+  volumes: 
+    - name: pig-web-conf
+      configMap:
+        name: pig-web-conf
+        defaultMode: 420
+
+  volumeMounts:
+    - name: pig-web-conf
+      readOnly: true
+      mountPath: /etc/nginx/conf.d/pig-web.conf
+      subPath: pig-web.conf
+
+  replicaCount: 1
+
+  startupProbe:
+    enabled: true
+    failureThreshold: "3"
+    initialDelaySeconds: "30"
+    periodSeconds: "30"
+    successThreshold: "1"
+    timeoutSeconds: "5"
+
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+  ingress:
+    enabled: true

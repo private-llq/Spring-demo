@@ -17,6 +17,12 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!--读取yaml文件-->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.23</version>
+        </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -27,7 +33,7 @@
             <artifactId>hutool-all</artifactId>
             <version>5.3.5</version>
         </dependency>
-<!--        导入-->
+        <!--导入-->
         <!--poi-->
         <dependency>
             <groupId>org.apache.poi</groupId>
