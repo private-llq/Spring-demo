@@ -1,6 +1,7 @@
 package org.example.springdemo.controller;
 
 import org.example.springdemo.factory.UserFactory;
+import org.example.springdemo.model.BookEntity;
 import org.example.springdemo.model.UserEntity;
 import org.example.springdemo.service.UserService;
 import org.springframework.beans.factory.BeanFactory;
@@ -46,6 +47,13 @@ public class UserController {
          UserEntity userFactory = UserFactory.getUserFactory();
          userFactory.addUser();
 
+
+
+
+//          测试
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        BookEntity bookEntity = classPathXmlApplicationContext.getBean("bookEntity", BookEntity.class);
+        System.out.println(bookEntity);
 
     }
 
