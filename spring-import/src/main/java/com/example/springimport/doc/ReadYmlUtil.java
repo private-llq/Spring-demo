@@ -14,6 +14,12 @@ import java.util.regex.Pattern;
  * @Date 2022/06/16 9:43
  * @Version 1.0
  **/
+/**
+ * @Deacription 支持读取${}占位符中的内容
+ * @Author levi
+ * @Date 2022/06/16 9:43
+ * @Version 1.0
+ **/
 public class ReadYmlUtil {
 
     // ${} 占位符 正则表达式
@@ -50,7 +56,8 @@ public class ReadYmlUtil {
     private static void loadYml(String fileName){
         nowFileName.set(fileName);
         if (!ymls.containsKey(fileName)){
-            ymls.put(fileName , new Yaml().loadAs(ReadYmlUtil.class.getResourceAsStream("/" + fileName),LinkedHashMap.class));
+            System.out.println(ReadYmlUtil.class.getResourceAsStream("/" + fileName));
+            ymls.put(fileName , new Yaml().loadAs(ReadYmlUtil.class.getResourceAsStream("/spring-demo/spring-import/" + fileName),LinkedHashMap.class));
         }
     }
 
@@ -101,7 +108,7 @@ public class ReadYmlUtil {
      */
     public static String getProfiles(){
         if (profileLocal.get() == null) {
-            String value = (String) getValue("values.yaml", "spring.profiles.active");
+            String value = (String) getValue("application.yml", "spring.profiles.active");
             setProfile(value);
         }
         return profileLocal.get();
@@ -123,7 +130,7 @@ public class ReadYmlUtil {
      * @return
      */
     public static String getValueToString(String key){
-        return (String)getValue("values.yaml" , key);
+        return (String)getValue("application.yml" , key);
     }
 
     /**
@@ -132,7 +139,7 @@ public class ReadYmlUtil {
      * @return
      */
     public static String getProfileValueToString(String key){
-        String fileName = "values-" + getProfiles() + ".yml";
+        String fileName = "application-" + getProfiles() + ".yml";
         return (String)getValue(fileName , key);
     }
 
@@ -142,10 +149,11 @@ public class ReadYmlUtil {
      */
     public static void main(String[] args) {
         System.out.println(getProfiles());
-        System.out.println(ReadYmlUtil.getValueToString("application.type"));//get application.yml
+        System.out.println(ReadYmlUtil.getValueToString("spring.datasource.url"));//get application.yml
 //        System.out.println(ReadYmlUtil.getValueToString("your-yaml-file-name.yml", "key1.key2"));//get other yml
 //        System.out.println(ReadYmlUtil.getProfileValueToString("Ignite-addr"));// get application-${profile}.yml
-//        ReadYmlUtil.setProfile("test"); //主动修改环境配置
+
+        ReadYmlUtil.setProfile("test"); //主动修改环境配置
 //        System.out.println(ReadYmlUtil.getProfileValueToString("Ignite-addr"));// get application-${profile}.yml
     }
 
