@@ -2,6 +2,8 @@ package org.example.springdemo.controller;
 
 import org.example.springdemo.factory.UserFactory;
 import org.example.springdemo.model.BookEntity;
+import org.example.springdemo.model.DeptEntity;
+import org.example.springdemo.model.EmpEntity;
 import org.example.springdemo.model.UserEntity;
 import org.example.springdemo.service.UserService;
 import org.springframework.beans.factory.BeanFactory;
@@ -54,6 +56,25 @@ public class UserController {
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
         BookEntity bookEntity = classPathXmlApplicationContext.getBean("bookEntity", BookEntity.class);
         System.out.println(bookEntity);
+
+
+
+//        //内部注入Bean
+//        ClassPathXmlApplicationContext classPathXmlWebApplicationContext = new ClassPathXmlApplicationContext("spring01.xml");
+//        EmpEntity empEntity = (EmpEntity) classPathXmlWebApplicationContext.getBean("empEntity");
+//        System.out.println("实体类员工对象的打印的值："+empEntity);
+
+
+
+        //内部注入Bean
+        ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("spring02.xml");
+        DeptEntity deptEntity = (DeptEntity) app.getBean("deptEntity");
+        System.out.println("实体类员工对象的打印的值："+deptEntity);
+
+
+
+
+
 
     }
 

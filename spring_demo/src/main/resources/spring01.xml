@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--内部bean -->
+    <bean id="empEntity" class="org.example.springdemo.model.EmpEntity">
+    <!--设置属性name/age -->
+    <property name="name" value="mayikt"></property>
+    <property name="age" value="21"></property>
+    <!-- 嵌入部门bean-->
+    <property name="deptEntity">
+        <bean id="deptEntity" class="org.example.springdemo.model.DeptEntity">
+            <property name="name" value="教育部门"></property>
+        </bean>
+    </property>
+    </bean>
+
+</beans>
