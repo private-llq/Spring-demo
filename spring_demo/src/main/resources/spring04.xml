@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="stuEntity" class="org.example.springdemo.model.StuEntity">
+        <!--数组类型注入-->
+        <property name="arrays">
+            <array>
+                <value>mayikt01</value>
+                <value>mayikt02</value>
+            </array>
+        </property>
+        <!--list-->
+        <property name="list">
+            <list>
+                <value>语文</value>
+                <value>数学</value>
+            </list>
+        </property>
+        <!--Map-->
+        <property name="map">
+            <map>
+                <entry key="余胜军" value="23"></entry>
+                <entry key="小薇" value="25"></entry>
+            </map>
+        </property>
+        <!--Set-->
+        <property name="Set">
+            <set>
+                <value>01</value>
+                <value>02</value>
+            </set>
+        </property>
+    </bean>
+
+</beans>

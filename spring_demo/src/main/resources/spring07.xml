@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+<!--    singleton 单例  prototype 多例-->
+    <bean id="memberEntity" class="org.example.springdemo.model.MemberEntity" init-method="init" destroy-method="destroy">
+        <property name="name" value="刘良琪"></property>
+    </bean>
+
+<!--    注册bean对象的MayiktBeanPostProcessor-->
+    <bean id="mayiktBeanPostProcessor" class="org.example.springdemo.beanFactory.MayiktBeanPostProcessor"></bean>
+    <bean id="mayiktBeanPost02" class="org.example.springdemo.beanFactory.MayiktBeanPost02"></bean>
+</beans>

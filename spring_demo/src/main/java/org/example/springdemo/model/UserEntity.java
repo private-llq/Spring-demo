@@ -8,6 +8,9 @@ package org.example.springdemo.model;
  * @description: 公司
  */
 public class UserEntity {
+    public UserEntity(){
+        System.out.println("无参构造");
+    }
     public  void  addUser(){
         System.out.println("添加用户");
     }

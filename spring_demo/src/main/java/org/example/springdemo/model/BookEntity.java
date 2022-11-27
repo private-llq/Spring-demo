@@ -11,6 +11,9 @@ public class BookEntity {
     private String orderId;
     private String orderName;
 
+    public BookEntity() {
+    }
+
     public BookEntity(String orderId, String orderName) {
         this.orderId = orderId;
         this.orderName = orderName;

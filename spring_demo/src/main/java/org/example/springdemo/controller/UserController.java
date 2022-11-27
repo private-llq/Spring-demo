@@ -4,6 +4,8 @@ import org.example.springdemo.factory.UserFactory;
 import org.example.springdemo.model.BookEntity;
 import org.example.springdemo.model.DeptEntity;
 import org.example.springdemo.model.EmpEntity;
+import org.example.springdemo.model.StuEntity;
+import org.example.springdemo.model.StuEntitys;
 import org.example.springdemo.model.UserEntity;
 import org.example.springdemo.service.UserService;
 import org.springframework.beans.factory.BeanFactory;
@@ -46,16 +48,16 @@ public class UserController {
 //        UserEntity userEntity = classPathXmlApplicationContext.getBean("UserEntity", UserEntity.class);
 //        System.out.println(userEntity);
 //        userEntity.addUser();
-         UserEntity userFactory = UserFactory.getUserFactory();
-         userFactory.addUser();
+//         UserEntity userFactory = UserFactory.getUserFactory();
+//         userFactory.addUser();
 
 
 
 
 //          测试
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
-        BookEntity bookEntity = classPathXmlApplicationContext.getBean("bookEntity", BookEntity.class);
-        System.out.println(bookEntity);
+//        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
+//        BookEntity bookEntity = classPathXmlApplicationContext.getBean("bookEntity", BookEntity.class);
+//        System.out.println(bookEntity);
 
 
 
@@ -66,13 +68,22 @@ public class UserController {
 
 
 
-        //内部注入Bean
-        ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("spring02.xml");
-        DeptEntity deptEntity = (DeptEntity) app.getBean("deptEntity");
-        System.out.println("实体类员工对象的打印的值："+deptEntity);
+//        //内部注入Bean
+//        ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("spring02.xml");
+//        DeptEntity deptEntity = (DeptEntity) app.getBean("deptEntity");
+//        System.out.println("实体类员工对象的打印的值："+deptEntity);
 
 
 
+//        //注入集合类型属性
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring03.xml");
+//        StuEntity stuEntity = (StuEntity) applicationContext.getBean("stuEntity");
+//        System.out.println("集合的值："+stuEntity);
+
+        //集合注入部分提取公共
+        ClassPathXmlApplicationContext application = new ClassPathXmlApplicationContext("spring05.xml");
+        StuEntitys stuEntitys = (StuEntitys) application.getBean("stuEntitys");
+        System.out.println("集合注入部分提取公共集合的值："+stuEntitys);
 
 
 

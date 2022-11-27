@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 提取公共部分-->
+    <util:list id="list">
+        <value>mayikt01</value>
+        <value>mayikt02</value>
+    </util:list>
+    <bean id="stuEntity" class="org.example.springdemo.model.StuEntity">
+        <property name="list" ref="list"></property>
+    </bean>
+    <bean id="stuEntitys" class="org.example.springdemo.model.StuEntitys">
+        <!--对我们的list属性赋值-->
+        <property name="list">
+            <list>
+                <value>list01</value>
+                <value>list02</value>
+            </list>
+        </property>
+        <!--对我们的arrays属性赋值-->
+        <property name="arrays">
+            <array>
+                <value>mayikt01</value>
+                <value>mayikt02</value>
+            </array>
+        </property>
+        <!--对我们的map属性赋值-->
+        <property name="map">
+            <map>
+                <entry key="mayikt" value="余胜军"></entry>
+                <entry key="xiaowei" value="小薇"></entry>
+            </map>
+        </property>
+        <!--对我们的set属性赋值-->
+        <property name="set">
+            <set>
+                <value>list01</value>
+                <value>list02</value>
+            </set>
+        </property>
+    </bean>
+</beans>
