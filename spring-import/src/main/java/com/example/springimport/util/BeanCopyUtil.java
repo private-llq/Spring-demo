@@ -1,6 +1,5 @@
 package com.example.springimport.util;
 
-import com.example.mystarter.test.YuApiClientConfig;
 import org.springframework.beans.BeanUtils;
 
 import java.util.ArrayList;
