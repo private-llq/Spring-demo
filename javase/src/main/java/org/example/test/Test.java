@@ -18,8 +18,8 @@ public class Test {
        int b  =20;
        int max =a>b ?a:b;
        System.out.println(max);
-        System.out.println("----------------");
-
+       System.out.println("----------------");
+        System.out.println("输出");
 
 
     }
