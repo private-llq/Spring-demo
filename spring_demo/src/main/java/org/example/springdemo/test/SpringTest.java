@@ -3,6 +3,7 @@ package org.example.springdemo.test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 /**
  * @author liuliangqi
  * @date 2022/12/26 13:59
@@ -12,6 +13,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        System.out.println(context.getBean("a", StudentA.class));
+        System.out.println(context.getBean("a", StudentA.class));
     }
 }
