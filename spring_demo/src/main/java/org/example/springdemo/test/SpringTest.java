@@ -14,5 +14,6 @@ public class SpringTest {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         System.out.println(context.getBean("a", StudentA.class));
+
     }
 }
