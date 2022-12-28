@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
-
-<!--&lt;!&ndash;注入spring容器中&ndash;&gt;-->
-<!--<bean id="UserService" class="org.example.springdemo.service.impl.UserServiceImpl">-->
-<!--    <property name="userDao" ref="userDao"></property>-->
-<!--</bean>-->
-
-<!--&lt;!&ndash;引用userDao&ndash;&gt;-->
-<!--  <bean id="userDao" class="org.example.springdemo.dao.impl.UserDaoImpl"></bean>-->
-
-
-
-<bean id="UserEntity" class="org.example.springdemo.model.UserEntity"></bean>
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+      ">
+    <bean id="a" class="org.example.springdemo.test.StudentA">
+        <constructor-arg index="0" ref="b"></constructor-arg>
+    </bean>
+    <bean id="b" class="org.example.springdemo.test.StudentB">
+        <constructor-arg index="0" ref="c"></constructor-arg>
+    </bean>
+    <bean id="c" class="org.example.springdemo.test.StudentC">
+        <constructor-arg index="0" ref="a"></constructor-arg>
+    </bean>
 </beans>

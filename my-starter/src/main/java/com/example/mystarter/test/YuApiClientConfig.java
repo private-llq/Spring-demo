@@ -1,9 +1,5 @@
 package com.example.mystarter.test;
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-
 /**
  * @author liuliangqi
  * @version V1.0
