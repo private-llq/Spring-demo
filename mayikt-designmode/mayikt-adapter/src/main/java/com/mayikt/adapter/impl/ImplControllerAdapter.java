@@ -2,7 +2,6 @@ package com.mayikt.adapter.impl;
 
 import com.mayikt.adapter.ControllerAdapter;
 import com.mayikt.adapter.controller.Controller;
-import com.mayikt.adapter.controller.impl.AnnotationController;
 import com.mayikt.adapter.controller.impl.ImplController;
 
 /**

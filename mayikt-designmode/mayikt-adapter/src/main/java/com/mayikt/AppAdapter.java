@@ -2,7 +2,7 @@ package com.mayikt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.servlet.DispatcherServlet;
+
 // ctrl+鼠标左键
 /**
  * @author 余胜军
