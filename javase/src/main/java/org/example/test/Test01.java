@@ -3,6 +3,7 @@ package org.example.test;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author liuliangqi
@@ -49,7 +50,7 @@ public class Test01 {
 //        System.out.println(list);
 
 
-        HashMap<String, String> map = new HashMap<>(16);
+        Map<String, String> map = new HashMap<>(16);
         List<Object> list = new ArrayList<>(10);
 
 

@@ -45,11 +45,8 @@ public class Test02 {
         System.out.println(LocalDateTime.now());
         System.out.println(LocalDateTime.MAX);
         System.out.println(LocalDateTime.of(1, 1, 1, 1, 1));
-
-
-
-
     }
+
     /*正例：超过 3 层的 if-else 的逻辑判断代码可以使用卫语句、策略模式、状态模式等来实现，其中卫语句
     示例如下：
     public void findBoyfriend (String man){
