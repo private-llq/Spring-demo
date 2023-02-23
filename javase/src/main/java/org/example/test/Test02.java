@@ -1,7 +1,5 @@
 package org.example.test;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -18,7 +16,7 @@ import java.time.LocalDateTime;
 public class Test02 {
 
     // 使用 SLF4J：
-    private static final Logger logger = LoggerFactory.getLogger(Test.class);
+//    private static final Logger logger = LoggerFactory.getLogger(Test.class);
 
     //使用 JCL：
     private static final Log log = LogFactory.getLog(Test.class);
@@ -33,7 +31,7 @@ public class Test02 {
 
     public static void main(String[] args) {
         log.info("打印日志.......");
-        logger.debug("打印日志");
+//        logger.debug("打印日志");
         System.out.println(Instant.now());
         System.out.println(Instant.MAX);
         long start = System.currentTimeMillis();
