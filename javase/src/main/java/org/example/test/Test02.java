@@ -2,7 +2,6 @@ package org.example.test;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -19,7 +18,7 @@ public class Test02 {
 //    private static final Logger logger = LoggerFactory.getLogger(Test.class);
 
     //使用 JCL：
-    private static final Log log = LogFactory.getLog(Test.class);
+    private static final Log log = LogFactory.getLog(Test02.class);
 
     private static final ThreadLocal<DateFormat> df = new ThreadLocal<DateFormat>() {
         @Override
@@ -89,7 +88,4 @@ public class Test02 {
             }
         }
     }
-
-
-
 }

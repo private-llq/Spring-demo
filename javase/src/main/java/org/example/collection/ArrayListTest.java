@@ -18,10 +18,10 @@ public class ArrayListTest {
         List<String> list = new ArrayList<>(10);
         list.add("llq");
         list.add("LLQ");
-        log.info("list:{}",list);
+        log.info("list:{}", list);
         //获取ArrayList的元素
         String s = list.get(1);
-        log.info("list的值：{}",s);
+        log.info("list的值：{}", s);
         list.remove(0);
         System.out.println(list);
         list.clear();
@@ -36,7 +36,7 @@ public class ArrayListTest {
             @Override
             public String apply(String s) {
                 System.out.println("进来了");
-                list.forEach(item->item.equals(s));
+                list.forEach(item -> item.equals(s));
                 return s;
             }
         });
