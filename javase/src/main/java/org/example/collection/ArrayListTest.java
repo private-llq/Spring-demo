@@ -4,7 +4,6 @@ package org.example.collection;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ListIterator;
 import java.util.function.UnaryOperator;
 
@@ -15,7 +14,7 @@ import java.util.function.UnaryOperator;
 @Slf4j
 public class ArrayListTest {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>(10);
+        ArrayList<String> list = new ArrayList<>(10);
         list.add("llq");
         list.add("LLQ");
         log.info("list:{}", list);
@@ -40,5 +39,17 @@ public class ArrayListTest {
                 return s;
             }
         });
+
+
+        //拷贝测试：
+        ArrayList<Object> objectArrayList = new ArrayList<>();
+        User user = new User("llq");
+        objectArrayList.add("llq");
+        objectArrayList.add(user);
+        ArrayList clone = (ArrayList) objectArrayList.clone();
+        System.out.println("两者的对比:" + (clone == objectArrayList));
+
+        //两者里面元素地址的对比
+        System.out.println("两者里面元素地址的对比:" + clone.get(1) == objectArrayList.get(1));
     }
 }
