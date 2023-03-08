@@ -13,22 +13,23 @@
 ### 技术栈
 
 - 用到什么技术栈我在来完善
-1. springboot
-2. redis
-3. mybatis
-4. mybatisplus
-5. mysql
-6. spring
-7. springmvc
+1. SpringBoot
+2. Redis
+3. Mybatis
+4. MybatisPlus
+5. Mysql
+6. Spring
+7. SpringMVC
+8. java包（例如：java.io、java.util、java.lang等等..）
 
 ### 包含内容
-1. 设计模式demo   --模块名：designPatter
-2. JavaSE的demo  --模块名：javase
-3. spring集成redis的示例  --模块名：spring-redis
-4. spring集成mybatispuls的示例  --模块名：spring-mybatisplus
+1. 设计模式demo   --模块名：DesignPatter
+2. JavaSE的demo或者java包  --模块名：javase
+3. Spring集成Redis的示例  --模块名：spring-redis
+4. Spring集成MybatisPuls的示例  --模块名：spring-mybatisplus
 5. 导入的示例      --模块名：spring-import
-6. 自定义springboot的start的示例  --模块名：my-starter
-7. spring源码的测试示例   --模块名：spring_demo
+6. 自定义SpringBoot的start的示例  --模块名：my-starter
+7. Spring源码的测试示例   --模块名：spring_demo
 
 
 
