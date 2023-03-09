@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>spring_demo</artifactId>
+    <artifactId>spring-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>spring_demo</name>
+    <name>spring-demo</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
