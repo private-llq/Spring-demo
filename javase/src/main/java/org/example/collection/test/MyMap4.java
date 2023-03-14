@@ -18,7 +18,6 @@ public class MyMap4 {
     map.put("004", "小美");
     map.put("005", "小黑");
 
-
     // 获取所有的键值对对象
     // Set集合中装的是键值对对象（Entry对象）
     // 而Entry里面装的是键和值
