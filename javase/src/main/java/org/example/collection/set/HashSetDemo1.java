@@ -1,4 +1,6 @@
-package org.example.collection;
+package org.example.collection.set;
+
+import org.example.collection.Student;
 
 import java.util.HashSet;
 import java.util.Iterator;

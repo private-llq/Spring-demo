@@ -1,7 +1,8 @@
-package org.example.collection;
+package org.example.collection.list;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.collection.User;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
