@@ -2,20 +2,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.example</groupId>
-        <artifactId>spring-demo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
 
+    <!--    父级依赖-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- 项目的依赖-->
     <groupId>com.example</groupId>
-    <artifactId>spring-redis</artifactId>
+    <artifactId>spring-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-redis</name>
-    <description>spring-redis</description>
+    <!--    项目名-->
+    <description>spring-demo</description>
+    <name>spring-demo</name>
+    <!--    多模块-->
+    <modules>
+        <module>designPatter</module>
+        <module>javase</module>
+        <module>my-starter</module>
+        <module>spring-demo</module>
+        <module>spring-mybatisplus</module>
+        <module>spring-redis</module>
+        <module>spring-import</module>
+    </modules>
+    <!--声明为pom-->
+    <packaging>pom</packaging>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -26,7 +44,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-<!--        连接池-->
+        <!--        连接池-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>

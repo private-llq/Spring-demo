@@ -29,7 +29,7 @@
 4. Spring集成MybatisPuls的示例  --模块名：spring-mybatisplus
 5. 导入的示例      --模块名：spring-import
 6. 自定义SpringBoot的start的示例  --模块名：my-starter
-7. Spring源码的测试示例   --模块名：spring_demo
+7. Spring源码的测试示例   --模块名：spring-demo
 
 
 

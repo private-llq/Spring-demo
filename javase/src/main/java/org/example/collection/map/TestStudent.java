@@ -7,6 +7,7 @@ import java.util.TreeMap;
  * @author liuliangqi
  * @date 2023/3/15 17:41
  */
+
 public class TestStudent {
   public static void main(String[] args) {
     Map<Student, Integer> map = new TreeMap<>();
