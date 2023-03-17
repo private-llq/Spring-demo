@@ -12,11 +12,11 @@
     </parent>
     <!-- 项目的依赖-->
     <groupId>com.example</groupId>
-    <artifactId>spring-demo</artifactId>
+    <artifactId>spring-demo-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <!--    项目名-->
-    <description>spring-demo</description>
-    <name>spring-demo</name>
+    <description>spring-demo-test</description>
+    <name>spring-demo-test</name>
     <!--    多模块-->
     <modules>
         <module>designPatter</module>
