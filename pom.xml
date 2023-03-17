@@ -12,17 +12,17 @@
     </parent>
     <!-- 项目的依赖-->
     <groupId>com.example</groupId>
-    <artifactId>spring-demo-test</artifactId>
+    <artifactId>spring-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <!--    项目名-->
-    <description>spring-demo-test</description>
-    <name>spring-demo-test</name>
+    <description>spring-demo</description>
+    <name>spring-demo</name>
     <!--    多模块-->
     <modules>
         <module>designPatter</module>
         <module>javase</module>
         <module>my-starter</module>
-        <module>spring-demo</module>
+        <module>spring-demo2</module>
         <module>spring-mybatisplus</module>
         <module>spring-redis</module>
         <module>spring-import</module>

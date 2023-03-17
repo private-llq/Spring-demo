@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>spring-demo-test</artifactId>
+        <artifactId>spring-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
     <groupId>org.example</groupId>
     <artifactId>spring-demo2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>spring-demo2</name>
-
     <modules>
         <module>spring-demo1</module>
     </modules>
