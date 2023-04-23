@@ -30,6 +30,7 @@
 5. 导入的示例      --模块名：spring-import
 6. 自定义SpringBoot的start的示例  --模块名：my-starter
 7. Spring源码的测试示例   --模块名：spring-demo
+8. 项目的测试示例模块     ---模块名：project-test
 
 
 
