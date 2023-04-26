@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.demo.easyexceldemo.mapper.EmployeeImportMapper">
+    <insert id="batchInsert">
+        INSERT INTO `employee` (
+        `user_name`,
+        `gender`,
+        `age`,
+        `birthday`,
+        `marital_status`,
+        `education`,
+        `blood_type`,
+        `mobile`,
+        `department_name`,
+        `national_area`,
+        `province`,
+        `city`,
+        `id_card_number`,
+        `personal_mail_box`
+        )
+        VALUES
+        <foreach collection="list" item="employee" separator=",">
+            (
+            #{employee.userName},
+            #{employee.gender},
+            #{employee.age},
+            #{employee.birthday},
+            #{employee.maritalStatus},
+            #{employee.education},
+            #{employee.bloodType},
+            #{employee.mobile},
+            #{employee.departmentName},
+            #{employee.nationalArea},
+            #{employee.province},
+            #{employee.city},
+            #{employee.idCardNumber},
+            #{employee.personalMailBox}
+            )
+        </foreach>
+    </insert>
+</mapper>

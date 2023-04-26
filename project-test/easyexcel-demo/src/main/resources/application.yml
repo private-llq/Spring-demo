@@ -1,0 +1,44 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+      initial-size: 10
+      max-active: 100
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  # SpringBoot2.6.0和 swagger冲突问题：
+  # 原因是在springboot2.6.0中将SpringMVC 默认路径匹配策略从AntPathMatcher 更改为 PathPatternParser，
+  # 导致出错，解决办法是切换回原先的AntPathMatcher
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.example.easyexcel.entity
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: null
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
