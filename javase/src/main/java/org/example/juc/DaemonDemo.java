@@ -1,5 +1,7 @@
 package org.example.juc;
 
+import net.sf.jsqlparser.statement.select.KSQLWindow;
+
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,7 +23,6 @@ public class DaemonDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         System.out.println(Thread.currentThread().getName() + " 主线程结束");
     }
 }
