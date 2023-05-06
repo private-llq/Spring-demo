@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "jpush.environment",
+      "type": "java.lang.String",
+      "description": "Description for jpush.environment."
+    },
+    {
+      "name": "jpush.appKey",
+      "type": "java.lang.String",
+      "description": "Description for jpush.appKey."
+    },
+    {
+      "name": "jpush.masterSecret",
+      "type": "java.lang.String",
+      "description": "Description for jpush.masterSecret."
+    }
+  ] }
