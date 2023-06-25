@@ -84,11 +84,11 @@
           <version>1.15</version>
           <scope>compile</scope>
       </dependency>
-      <dependency>
-          <groupId>com.ideo</groupId>
-          <artifactId>ideo-service-client</artifactId>
-          <version>2.0-SNAPSHOT</version>
-      </dependency>
+<!--      <dependency>-->
+<!--          <groupId>com.ideo</groupId>-->
+<!--          <artifactId>ideo-service-client</artifactId>-->
+<!--          <version>2.0-SNAPSHOT</version>-->
+<!--      </dependency>-->
   </dependencies>
 
   <build>
