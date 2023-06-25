@@ -1,5 +1,6 @@
 package org.example.jdk8;
 
-public @interface Anno2 {
+import java.util.Date;
 
+public @interface Anno2 {
 }
