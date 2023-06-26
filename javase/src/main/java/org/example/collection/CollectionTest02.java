@@ -20,7 +20,7 @@ public class CollectionTest02 {
     list.add("bb");
     list.add("aa");
     Collections.addAll(list, "ee", "dd", "ff");
-    Collections.addAll(list, new String[] {"gg", "oo", "pp"});
+    Collections.addAll(list, "gg", "oo", "pp");
     System.out.println(list);
     // binarySearch必须在有序的集合中查找：--》排序：
     Collections.sort(list); // sort提供的是升序排列
