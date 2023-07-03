@@ -1,6 +1,7 @@
 package org.example.library;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -15,8 +16,9 @@ public class BorrowOperation implements IOperation {
 
         final int MAX_BOOKS = 100; // 最大书籍数量限制
         Book[] borrowedBooks = new Book[MAX_BOOKS]; // 存放用户借阅书籍信息的数组
+        List<BookList> bookLists = Arrays.asList(bookList);
 
-        for (int i = 0; i < bookList.getBooks().size(); i++) {
+        for (int i = 0; i < bookLists.size(); i++) {
             if (bookList.getBooks().get(i).getName().equals(name)) {
                 flag = false;
 
