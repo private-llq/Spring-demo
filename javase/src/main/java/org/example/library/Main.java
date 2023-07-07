@@ -23,6 +23,7 @@ public class   Main {
             case 1:
                 user = new NormalUser(scan.next());
                 break;
+            default:break;
         }
 
         IOperation iOperatiOn = null;

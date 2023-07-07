@@ -26,7 +26,6 @@ public class Deloperation implements IOperation {
             }
         }
 
-
         if (flag) {
             throw new OperationException("未查找到该书籍!");
         }
