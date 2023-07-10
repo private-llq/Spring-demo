@@ -1,5 +1,8 @@
 package org.example.test;
 
+import com.alibaba.fastjson.JSON;
+import org.apache.commons.codec.binary.Base64;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,10 +11,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-
-import org.apache.commons.codec.binary.Base64;
-import com.alibaba.fastjson.JSON;
 
 
 public class SMSUtil {
@@ -55,7 +54,7 @@ public class SMSUtil {
         stringBuffer.append(sendReq.getAddSerial());
 
         //System.out.println(stringBuffer.toString());
-        sendReq.setMac(Md5Util.MD5(stringBuffer.toString()).toLowerCase());
+//        sendReq.setMac(Md5Util.MD5(stringBuffer.toString()).toLowerCase());
         System.out.println(sendReq.getMac());
 
         String reqText = JSON.toJSONString(sendReq);
