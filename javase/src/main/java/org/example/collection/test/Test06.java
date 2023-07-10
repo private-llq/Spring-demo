@@ -2,15 +2,15 @@ package org.example.collection.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.function.Supplier;
 
 import static jdk.nashorn.internal.objects.Global.print;
 
 public class Test06 {
+
+    private  static  final  ThreadPoolExecutor  executor = new ThreadPoolExecutor(5,10,1L,TimeUnit.SECONDS,new ArrayBlockingQueue<>(100),new ThreadPoolExecutor.CallerRunsPolicy());
+
     public static void useCompletableFuture_complicated() {
         // 这个方法时描述一般地使用CompletableFuture实现异步操作，即复杂的使用CompletableFuture实现异步操作
 
@@ -67,7 +67,7 @@ public class Test06 {
         // 这个方法时描述利用1.8新特性，简单使用CompletableFuture实现异步操作
 
         // 先创建两个活动线程的线程池
-        ExecutorService executor = Executors.newFixedThreadPool(2);
+//        ExecutorService executor = Executors.newFixedThreadPool(2);
 
         List<String> nameList = new ArrayList<String>();
 
@@ -89,7 +89,7 @@ public class Test06 {
         while (!executor.isTerminated()) {
             System.out.println("no terminated");
             try {
-                System.out.println("我要休眠一下");
+                System.out.println("");
                 TimeUnit.MILLISECONDS.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
