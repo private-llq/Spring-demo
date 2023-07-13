@@ -30,7 +30,6 @@ public class Test07 {
                 Test07.threadLocal.set("local_B");
                 print("B");
                 System.out.println("after remove : " + threadLocal.get());
-
             }
         },"B").start();
     }
