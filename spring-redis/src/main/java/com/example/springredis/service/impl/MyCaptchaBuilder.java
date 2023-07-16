@@ -22,13 +22,13 @@ public class MyCaptchaBuilder implements CaptchaBuilder {
 
         LineCaptcha captcha = CaptchaUtil.createLineCaptcha(115,38,4,5) ;
         captcha.setGenerator(new RandomGenerator("0123456789ABCDEFGHJKLMNPQRSTUVWXYZ",4));
-        //将验证码转成base64
-        captchaInfo.setImage(captcha.getImageBase64());
-        //生成uuid
-        String uuid = IdUtil.randomUUID();
-        captchaInfo.setUuid(uuid);
-        //得到验证码的值
-        captchaInfo.setCode(captcha.getCode());
+        ////将验证码转成base64
+        //captchaInfo.setImage(captcha.getImageBase64());
+        ////生成uuid
+        //String uuid = IdUtil.randomUUID();
+        //captchaInfo.setUuid(uuid);
+        ////得到验证码的值
+        //captchaInfo.setCode(captcha.getCode());
         //将存到缓存中，键值是UUID
         return captchaInfo;
     }
