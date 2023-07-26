@@ -58,5 +58,4 @@ public class ResultVo<T> {
     public static <R> ResultVo<R> failureMsg(String message) {
         return failure(UNKNOWN_FAIL_CODE, message);
     }
-
 }
