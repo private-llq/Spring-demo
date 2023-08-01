@@ -28,7 +28,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.basics.log.annotation.Log;
 import com.basics.utils.R;
 import com.hare.file.api.FileApi;
-import com.hare.tawl.dto.*;
+import com.hare.tawl.com.example.dto.*;
 
 import com.hare.tawl.entity.*;
 import com.hare.tawl.enums.*;

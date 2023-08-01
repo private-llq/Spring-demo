@@ -26,7 +26,7 @@
         <module>spring-mybatisplus</module>
         <module>spring-redis</module>
         <module>spring-import</module>
-        <module>springcloud</module>
+        <module>springcloud-demo</module>
     </modules>
     <!--声明为pom-->
     <packaging>pom</packaging>
