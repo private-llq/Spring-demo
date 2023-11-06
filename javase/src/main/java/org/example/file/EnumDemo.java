@@ -17,6 +17,7 @@ public class EnumDemo {
         System.out.println(index2);
         System.out.println(index3);
         System.out.println(index4);
+        System.out.println(index4);
         System.out.println("-------------------------------");
         //int compareTO(E o) 比较两个枚举项，返回的是索引值的差值
         int result = Season.WINTER.compareTo(Season.SPRING);
