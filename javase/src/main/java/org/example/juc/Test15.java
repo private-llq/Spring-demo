@@ -29,7 +29,6 @@ public class Test15 {
 
         try {
             List<Future<Integer>> futures = executorService.invokeAll(tasks);
-
             int sum = 0;
             for (Future<Integer> future : futures) {
                 sum += future.get(); // 获取计算结果并累加
