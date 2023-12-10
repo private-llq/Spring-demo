@@ -6,12 +6,17 @@ public class Fun2 {
     public static void main(String[] args) {
         double [][]a={{1,1,-1},{2,1,0},{1,-1,0}};
         double [][]x=inverse(a);
+        inversede(x);
         for (int i = 0; i < a.length; i++) {
             for(int j=0;j<a[0].length;j++){
                 inverse(a);
             }
         }
         System.out.println(Arrays.deepToString(inverse(a)));
+    }
+
+    private static void inversede(double[][] x) {
+
     }
 
     public static double[][] inverse(double[][] a) {

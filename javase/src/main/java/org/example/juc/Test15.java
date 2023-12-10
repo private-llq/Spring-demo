@@ -1,6 +1,7 @@
 package org.example.juc;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -26,7 +27,6 @@ public class Test15 {
             int finalI = i;
             tasks.add(() -> compute(finalI)); // 创建计算任务
         }
-
         try {
             List<Future<Integer>> futures = executorService.invokeAll(tasks);
             int sum = 0;
@@ -38,8 +38,8 @@ public class Test15 {
             e.printStackTrace();
         }
         executorService.shutdown();
+        //写一个冒泡排序
     }
-
     private static int compute(int num) {
         // 执行计算任务
         return num * num;

@@ -37,7 +37,6 @@ public class Usercontroller {
         return list;
     }
 
-
     /**
      * 验证码
      * @return
