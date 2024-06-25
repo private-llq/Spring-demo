@@ -7,12 +7,11 @@ import cn.hutool.core.util.IdUtil;
 import com.example.springredis.service.CaptchaBuilder;
 import com.example.springredis.vo.CaptchaInfo;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class MyCaptchaBuilder implements CaptchaBuilder {
-
-
-
 
     @Override
     public CaptchaInfo create() {

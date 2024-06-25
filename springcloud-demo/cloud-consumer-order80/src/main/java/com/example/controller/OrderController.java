@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RestController
 @Slf4j
@@ -25,5 +27,11 @@ public class OrderController {
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+    }
+
+    public static void main(String[] args) {
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日  HH时mm分");
+        System.out.println(simpleDateFormat.format(date));
     }
 }

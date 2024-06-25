@@ -1,7 +1,5 @@
 package com.example.springmybatisplus.config;
 
-import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
 import org.mybatis.spring.annotation.MapperScan;
@@ -9,9 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.example.springmybatisplus.dao")
+//@MapperScan("com.example.springmybatisplus.dao")
 public class MybatisPlusConfig {
-
     // 旧版
     @Bean
     public PaginationInterceptor paginationInterceptor() {

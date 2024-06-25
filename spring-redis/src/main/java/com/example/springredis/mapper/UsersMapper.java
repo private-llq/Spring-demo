@@ -10,6 +10,4 @@ import com.example.springredis.domain.Users;
 * @Entity com.example.springredis.domain.Users
 */
 public interface UsersMapper extends BaseMapper<Users> {
-
-
 }
