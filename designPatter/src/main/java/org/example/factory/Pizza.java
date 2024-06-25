@@ -1,5 +1,7 @@
 package org.example.factory;
 
+import java.util.Collections;
+
 /**
  * @program: spring-demo
  * @description: 看一个披萨的项目：要便于披萨种类的扩展，要便于维护。
@@ -30,5 +32,9 @@ public abstract class Pizza {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static void main(String[] args) {
+        Collections.sort(list,c);
     }
 }
