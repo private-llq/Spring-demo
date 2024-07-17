@@ -24,8 +24,6 @@ public class iTest {
         System.out.println("m的值：" + m);
         System.out.println("n的值：" + n);
         System.out.println("i的值：" + i);
-
-
     }
 
     public static int add(int p) {
