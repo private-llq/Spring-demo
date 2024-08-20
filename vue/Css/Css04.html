@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img {
+        /* blur 是一个函数，小括号里面的数值越大，图片越模糊，注意数值要加px单位 */
+        filter: blur(0px);
+    }
+
+    /* 需求：我们想页面一打开，一个盒子就从左边走到右边 */
+    /* 1.定义动画 */
+    @keyframes move {
+        /* 开始状态 */
+        0% {
+            transform: translateX(0px);
+        }
+        /* 结束状态 */
+        100% {
+            transform: translateX(1000px);
+        }
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 使用动画 */
+        animation-name: move;
+        /* 持续时间 */
+        animation-duration: 2s;
+    }
+</style>
+<body>
+图标<img src="images/pink.jpg" alt="图片">
+<div></div>
+</body>
+</html>

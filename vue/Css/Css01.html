@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>网页</title>
 </head>
  <style>
      a {
@@ -12,7 +12,11 @@
          /* 把行内元素 a 转换为 块级元素 */
          display: block;
      }
-
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box; /*  这样的话padding和border就不会撑大盒子了 */
+     }
      div {
          width: 300px;
          height: 100px;
@@ -33,6 +37,7 @@
     <div id="a">1</div>
     </br></br>
     <div id="span">中国</div>
+    <div id="*">中国2</div>
 </h1>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 需求：我们想页面一打开，一个盒子就从左边走到右边 */
+    /* 1.定义动画 */
+
+    @keyframes move {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(1000px, 0);
+      }
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* 使用动画 */
+      animation-name: move;
+      /* 持续时间 */
+      animation-duration: 2s;
+    }
+  </style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>
