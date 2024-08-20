@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //在 ES6 以前，我们无法给一个函数参数设置默认值，只能采用变通写法：
+    function add(a, b) {
+        // 判断 b 是否为空，为空就给默认值 1
+        b = b || 1;
+        return a + b;
+    }
+    // 传一个参数
+    console.log(add(10));
+    //现在可以这么写：直接给参数写上默认值，没传就会自动使用默认值
+    function add2(a, b = 1) {
+        return a + b;
+    }
+    // 传一个参数
+    console.log(add2(10));
+
+    //以前声明一个方法
+    // var print = function (obj) {
+    // console.log(obj);
+    // }
+    // 可以简写为：
+    var print = obj => console.log(obj);
+    // 测试调用
+    print(100);
+
+
+
+</script>
+</body>
+</html>

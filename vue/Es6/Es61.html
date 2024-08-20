@@ -7,20 +7,33 @@
 <body>
 
 <script>
-  {
-    var a = 1;
-    let b = 2;
-  }
-  console.log(a); // 1
-  console.log(b);
-  // var 可以声明多次
-  // let 只能声明一次
-  var m = 1
-  var m = 2
-  let n = 3
-  // let n = 4
-  console.log(m) // 2
-  console.log(n) // Identifier 'n' has already been declared
+  // {
+  //   var a = 1;
+  //   let b = 2;
+  // }
+  // console.log(a); // 1
+  // console.log(b);
+  // // var 可以声明多次
+  // // let 只能声明一次
+  // var m = 1
+  // var m = 2
+  // let n = 3
+  // // let n = 4
+  // console.log(m) // 2
+  // console.log(n) // Identifier 'n' has already been declared
+  // let arr = [1, 2, 3];
+  // const [x, y, z] = arr;
+  // console.log(x, y, z);
+  //fetch 是浏览器支持从远程获取数据的一个函数，这个函数返回的就是 Promise 对象
+  const fetchPromise = fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
+  console.log(fetchPromise);
+
+  fetchPromise.then((response) => {
+      console.log(`已收到响应：${response.status}`);
+  });
+  console.log("已发送请求……");
 </script>
 </body>
 </html>

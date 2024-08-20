@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  body {
+    color: #993c3c;
+    /* font: 12px/24px 'Microsoft YaHei'; */
+    font: 12px/1.5 'Microsoft YaHei';
+  }
+  div {
+    /* 子元素继承了父元素 body 的行高 1.5 */
+    /* 这个1.5 就是当前元素文字大小 font-size 的1.5倍   所以当前div 的行高就是21像素 */
+    font-size: 14px;
+  }
+  p {
+    /* 1.5 * 16 =  24 当前的行高 */
+    font-size: 16px;
+  }
+  /* li 没有手动指定文字大小  则会继承父亲的 文字大小  body 12px 所以 li 的文字大小为 12px
+        当前li 的行高就是  12 * 1.5  =  18
+  */
+  div:hover {
+    box-shadow:10px 10px 10px -4px rgba(0,0,0,.3);
+  }
+</style>
+<body>
+   <div id="div:hover">123</div>
+</body>
+</html>
