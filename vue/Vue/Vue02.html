@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>用户名:<input type="text" v-model="name"/></h1> <br/>
+    <h1>您输入的用户名是: {{name}}</h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //创建一个Vue对象
+    var app = new Vue({
+        //指定,该对象代表<div id="app">,也就是说,这个div中的所有内容,都被当前的app对象管理
+        el: "#app",
+        //定义vue中的数据
+        data: {
+            name: "张三"
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加的页面</title>
+</head>
+<body>
+<div id="app">
+  <button @click="add">添加</button>
+  <ul>
+    <li v-for="name in list">
+      <input type="checkbox"> {{name}}
+    </li>
+  </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      list: ["孙悟空", "猪八戒", "沙和尚"]
+    },
+    methods: {
+      add() {
+        //注意这里是unshift,向数组的头部添加一个元素
+        this.list.unshift("唐僧");
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
