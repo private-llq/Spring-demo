@@ -6,6 +6,7 @@ function Member() {
     this.name;
     this.age;
     this.tell;
+
     /**
      * 初始化
      */
@@ -20,9 +21,7 @@ function Member() {
      * 方法1
      */
     this.call = function() {
-
         console.log("我叫："+this.name);
-
     };
 
     /**
@@ -32,6 +31,3 @@ function Member() {
 
     }
 }
-
-let member = new Member();
-member.call();

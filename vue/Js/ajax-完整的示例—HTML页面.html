@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="./ajax/Ajax.js"></script>
+  <script src="./ajax/FruitAction.js"></script>
+  <style>
+    .box{
+      display: flex;
+    }
+  </style>
+</head>
+<!--网页主要内容部分-->
+<body>
+<div class="box">
+        <span>
+            水果：<input id="name" type="text" value="" />
+        </span>
+  <span>
+            说明：<input id="des"  type="text" value="" />
+        </span>
+  <button onclick="fruit.addData()"
+          style="margin-left: 10px;">新增数据</button>
+</div>
+<hr>
+<div id="app"></div>
+</body>
+<!--动态JS脚本部分-->
+<script>
+  //创建Ajax对象
+  let ajax = new Ajax();
+  let fruit = new FruitAction(ajax);
+  fruit.getData();
+</script>
+</html>
