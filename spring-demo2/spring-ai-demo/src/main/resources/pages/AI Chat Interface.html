@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <!-- 引入 Vue 3 的 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        /* 样式 */
+        body {
+            font-family: Avenir, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            width: 80vw;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .chat-window {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f4f4f9;
+            position: relative;
+        }
+
+        .chat-message {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+
+        .message-left {
+            flex-direction: row;
+        }
+
+        .message-right {
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #007bff;
+            color: white;
+            word-wrap: break-word;
+        }
+
+        .message-left .message-bubble {
+            background-color: #e4e6eb;
+            color: black;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .chat-input button:hover {
+            background-color: #0056b3;
+        }
+
+        /* From Uiverse.io by SchawnnahJ */
+        .loader {
+            position: relative;
+            width: 2.5em;
+            height: 2.5em;
+            transform: rotate(165deg);
+        }
+
+        .loader:before, .loader:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 0.25em;
+            transform: translate(-50%, -50%);
+        }
+
+        .loader:before {
+            animation: before8 2s infinite;
+        }
+
+        .loader:after {
+            animation: after6 2s infinite;
+        }
+
+        @keyframes before8 {
+            0% {
+                width: 0.5em;
+                box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+            }
+
+            35% {
+                width: 2.5em;
+                box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+            }
+
+            70% {
+                width: 0.5em;
+                box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+            }
+
+            100% {
+                box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+            }
+        }
+
+        @keyframes after6 {
+            0% {
+                height: 0.5em;
+                box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+            }
+
+            35% {
+                height: 2.5em;
+                box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+            }
+
+            70% {
+                height: 0.5em;
+                box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+            }
+
+            100% {
+                box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+            }
+        }
+
+        .loading {
+            position: relative;
+            bottom: -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="chat-container">
+        <div class="chat-window">
+            <div v-for="(message, index) in messages" :key="index" class="chat-message" :class="{'message-left': message.isUser, 'message-right': !message.isUser}">
+                <div class="avatar">{{ message.isUser ? '自己' : 'AI' }}</div>
+                <div class="message-bubble">
+                    {{ message.text }}
+                </div>
+            </div>
+            <div class="loading"  v-if="loading">
+                <div style="display: flex;align-items: center;justify-content: center;">
+                    <div class="loader"></div>
+                    <div style="margin-left: 10px;font-weight: bold; color: #e64c87;">加载中</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input v-model="userInput" @keydown.enter="sendMessage" placeholder="Type your question..." />
+            <button @click="sendMessage">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                userInput: '',
+                messages: [
+                    { text: '你有什么需要问的问题吗?', isUser: false }
+                ],
+                loading:false
+            };
+        },
+        methods: {
+            sendMessage() {
+                if (this.userInput.trim()) {
+                    // 添加用户的消息
+                    this.messages.push({ text: this.userInput, isUser: true });
+
+                    // 模拟AI回复（你可以在这里调用AI的接口）
+                    this.simulateAIResponse(this.userInput);
+
+                    // 清空输入框
+                    this.userInput = '';
+                }
+            },
+            async simulateAIResponse(userText) {
+                this.loading = true;
+                const res =await axios.post("http://localhost:8888/test", {
+                    "problem": this.userInput
+                },{ headers: { "Content-Type": "multipart/form-data" } })
+                this.messages.push({
+                    text: `AI回答内容: ${res.data.data}`,
+                    isUser: false,
+                });
+                this.loading = false;
+
+            },
+        },
+
+    }).mount('#app');
+</script>
+</body>
+</html>
