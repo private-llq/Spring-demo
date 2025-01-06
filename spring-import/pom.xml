@@ -16,6 +16,11 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>cn.idev.excel</groupId>
+            <artifactId>fastexcel</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 <!--        openai的Java库-->
         <dependency>
             <groupId>com.theokanning.openai-gpt3-java</groupId>
